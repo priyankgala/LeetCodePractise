@@ -14,15 +14,10 @@ import java.util.Random;
 public class TestClass {
 
     public static void main(String args[]) {
-        int max = 26;
-        int min = 1;
-        int range = max - min + 1;
-        Random rnd = new Random();
-        // generate random numbers within 1 to 10 
-        for (int i = 0; i < 28; i++) {
-            
-            char c = (char) (rnd.nextInt(26) + 'a');
-            System.out.println(""+c);
-        }
+        String str = "-123";
+        int a = Integer.parseInt(str);
+        System.out.println("Integer value is: "+a);
+       a = 2<3? 2:3;
+        System.out.println("Integer value is: "+a);
     }
 }
