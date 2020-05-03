@@ -50,7 +50,7 @@ public class D2JewelsandStones {
         }
         
         System.out.println("Result calculated is: "+result);
-        return -1;
+        return result;
     }
 
 }

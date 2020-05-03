@@ -15,49 +15,43 @@ import java.io.*;
 public class StringToIntegerATOI {
 
     public static void main(String args[]) {
-        String str = "-2147483648";
+        String str = "+-2";
         System.out.println("Output is: " + atoi(str));
     }
 
     private static int atoi(String str) {
         char[] ar = str.toCharArray();
-        int i = 0, n = ar.length;
+        int i = 0, n = ar.length, signCount=0;
         boolean positive = true;
-
-        while (i < ar.length && ar[i] == ' ') {
-            i++;
-        }
         if (i == n) {
             return 0;
         }
-
-        if (ar[i] == '+') {
+        
+        while (i < n && ar[i] == ' ') {
             i++;
-        } else if (ar[i] == '-') {
-            positive = false;
-            i++;
-        } else if (!Character.isDigit(ar[i])) {
-            return 0;
         }
+
+        while (i < n && (ar[i] == '+'|| ar[i] == '-')) {
+            if(++signCount >1) 
+                return 0;
+            if(ar[i] == '-') 
+                positive = false;
+            ++i;
+        }
+        
         int max = Integer.MAX_VALUE;
         int min = Integer.MIN_VALUE;
         long result = 0;
         while (i < n && Character.isDigit(ar[i])) {
             int value = Character.getNumericValue(ar[i]);
-            if (positive) {
-                result = result > max ? max : result;
-                System.out.println(""+result);
-            } else {
-                result = result < min ? min : result;
-                System.out.println(""+result);
+            System.out.println(ar[i]+" Character numeric value is:"+value);
+            if(result > max/10 || (result == max/10 && value > 7 )){
+                return positive? max:min;
             }
-            result = result * 10 + value;
-            ++i;
-
+             result = result * 10 + value;
+             ++i;
         }
-        System.out.println("Result is:" + result);
         if (!positive) {
-            System.out.println("Negative");
             return (int) result * -1;
         }
         return (int) result;
