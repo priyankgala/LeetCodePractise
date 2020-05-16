@@ -32,8 +32,6 @@ public class addNumbersInLinkedList {
 //        ListNode curr1 = list1;
         list1 = list1.next;    
         list1.next = new ListNode(3);
-        
-        
         list1 = list1.next;
         list1.next = new ListNode(7);
         list1 = list1.next;
