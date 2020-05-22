@@ -11,7 +11,7 @@ import java.util.LinkedList;
  *
  * @author kinja
  */
-public class D15OddEvenLinkedList {
+public class D16OddEvenLinkedList {
 
     public static class ListNode {
 

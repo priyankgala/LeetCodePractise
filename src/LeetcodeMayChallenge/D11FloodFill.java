@@ -38,7 +38,7 @@ public class D11FloodFill {
     public static void main(String args[]) {
 
         int[][] arr = {{1, 1, 1}, {1, 1, 0}, {1, 0, 1}};
-        int sr = 1, sc = 1, newColor = 2;
+        int sr = 2, sc = 1, newColor = 2;
 
         int[][] result = floodfill(arr, sr, sc, newColor);
         

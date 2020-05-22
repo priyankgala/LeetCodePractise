@@ -12,6 +12,8 @@ is the smallest possible.
 Note:
 The length of num is less than 10002 and will be ≥ k.
 The given num does not contain any leading zero.
+
+Hint Greedy algorithms used
  */
 public class D13RemoveKDigits {
     
