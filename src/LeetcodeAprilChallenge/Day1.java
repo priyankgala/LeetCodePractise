@@ -18,15 +18,28 @@ public class Day1 {
 
     public static void main(String args[]) {
 
-        int[] nums = {1, 0, 1};
+        int[] nums = {1, 0, 1, 0 , 2};
         System.out.println(singleNumber(nums));
     }
 
     private static int singleNumber(int[] nums) {
 
+        int number = 0; 
+        
+        for(int i: nums){
+        
+            number = number ^i;
+            
+        }
+        
+        return number;
+        
+        //////////////////////////////////////////////////
+        
+        /*Another way
         Arrays.sort(nums);
         for (int n : nums) {
-            System.out.print(n);
+            System.out.print(n+ " ");
         }
         System.out.println("");
         int i = 0;
@@ -40,5 +53,8 @@ public class Day1 {
         }
 
         return nums[i];
+
+
+*/
     }
 }
