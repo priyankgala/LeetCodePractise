@@ -7,33 +7,32 @@ import java.util.Map;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
 /**
  *
  * @author kinja
  */
-public class D10ValidAnagram {
+public class D12FindtheDifference {
 
     public static void main(String args[]) {
-
-        String s = "catt";
-        String t = "tac";
-
-        System.out.println("Is Valid anagram?" + validAnagram(s, t));
+        System.out.println("Different character is" + diff("car", "cart"));
     }
 
-    private static Boolean validAnagram(String s, String t) {
-        if(s.length() != t.length()) return false;
+    private static Character diff(String s, String t) {
+        char ch = ' ';
+        if (s.length() == t.length()) {
+            return ch;
+        }
         Map<Character, Integer> map = new HashMap<Character, Integer>();
         for (Character c : s.toCharArray()) {
             map.put(c, map.getOrDefault(c, 0) + 1);
         }
-        for(Character c: t.toCharArray()){
-            if(map.containsKey(c)){
-                map.put(c, map.get(c)-1);
-            }else{
-                return false;
+        for (Character c : t.toCharArray()) {
+            if (!map.containsKey(c)) {
+                return c;
             }
         }
-        return true;
+        return ch;
     }
+
 }
