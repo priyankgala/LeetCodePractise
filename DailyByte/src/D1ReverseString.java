@@ -1,9 +1,15 @@
-public class ReverseString {
+public class D1ReverseString {
 
     public static void main(String args[]) {
 //        String str = "Cat";
 //        String str = "The Daily bYTE";
-        String str = "CIVIC";
+        String str = "This tale is old";
+        StringBuilder s = new StringBuilder();
+        s.append(str);
+        s.reverse();
+        System.out.println(""+s);
+                
+                
         System.out.println(reverseString(str));
     }
 

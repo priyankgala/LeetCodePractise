@@ -9,7 +9,7 @@ Ex: Given the following strings...
 "URURD", return false
 "RUULLDRD", return true
  */
-public class VacuumCleanerRoute {
+public class D3VacuumCleanerRoute {
 
     public static void main(String args[]) {
         String str = "RUULLDRD";

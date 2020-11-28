@@ -10,7 +10,7 @@ Ex: Given the following strings...
 "A man, a plan, a canal: Panama.", return true
 */
 
-public class ValidPalindrome {
+public class D2ValidPalindrome {
     public static void main(String args[]){
     
         String str = "A man, a plan, a canal: Panama.";
