@@ -7,10 +7,7 @@ import java.util.Map;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-/**
- *
- * @author kinja
- */
+
 public class D10ValidAnagram {
 
     public static void main(String args[]) {
