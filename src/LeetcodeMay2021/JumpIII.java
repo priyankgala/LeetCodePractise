@@ -20,7 +20,7 @@ package LeetcodeMay2021;
 
 public class JumpIII {
     public static void main(String args[]){
-        int[] arr = {2,3,1,1,4};
+        int[] arr = {1,3,1,1,4};
         int result = jump(arr);
         System.out.println("Result is: "+result);
     }
